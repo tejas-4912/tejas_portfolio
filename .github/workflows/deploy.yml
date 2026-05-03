@@ -1,0 +1,42 @@
+# ============================================================
+#  CI/CD Pipeline — GitHub Actions
+#  Assignment: Deploy HTML/CSS to AWS EC2
+#
+#  INSTRUCTIONS:
+#  Fill in every blank marked with: ___________
+#  Do NOT change lines that are already complete.
+# ============================================================
+
+name: Deploy to EC2
+
+# ── TRIGGER ─────────────────────────────────────────────────
+# This pipeline should run whenever code is pushed to 'main'
+on:
+  push:
+    branches:
+      - __________        # Q1: Which branch should trigger this pipeline?
+
+# ── JOBS ────────────────────────────────────────────────────
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # The virtual machine that runs this job
+
+    steps:
+
+      # Step 1: Check out the repository code onto the runner
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: SSH into your EC2 and deploy
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets._______ }}      # Q2: Name of your EC2 IP secret
+          username: ${{ secrets.___________ }}  # Q3: Name of your SSH username secret
+          key: ${{ secrets.___________ }}       # Q4: Name of your SSH private key secret
+
+          script: |
+            cd /var/www/html
+            # Q5: Git command to get latest code
+            _________________________
+            sudo systemctl restart nginx

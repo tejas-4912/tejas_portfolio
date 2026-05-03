@@ -1,0 +1,95 @@
+/* =============================================
+   STARTER STYLESHEET — CI/CD Assignment
+   You may modify colours, fonts, and layout
+   as part of your "visible change" task.
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ── Header ────────────────────────────────── */
+header {
+  background-color: #1a73e8;   /* ← Try changing this colour */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ── Sections ──────────────────────────────── */
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  color: #1a73e8;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e8f0fe;
+  padding-bottom: 8px;
+}
+
+/* ── Skills List ───────────────────────────── */
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skills ul li {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ── Pipeline Info ─────────────────────────── */
+.pipeline-info code {
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #d93025;
+}
+
+/* ── Footer ────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
